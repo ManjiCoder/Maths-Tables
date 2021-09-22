@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 //import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,7 +30,13 @@ public class MainActivity extends AppCompatActivity {
 //                Toast.makeText(MainActivity.this, "This btn is working", Toast.LENGTH_SHORT).show();
                 String userNum = editText.getText().toString();
                 int num = Integer.parseInt(userNum);
-                textView.setText(num + " x 1   =  " + num * 1 +" \n" +num + " x 2   =  " + num * 2 +" \n" +num + " x 3   =  " + num * 3 +" \n" +num + " x 4   =  " + num * 4 +" \n" +num + " x 5   =  " + num * 5 +" \n" +num + " x 6   =  " + num * 6 +" \n" +num + " x 7   =  " + num * 7 +" \n" +num + " x 8   =  " + num * 8 +" \n" +num + " x 9   =  " + num * 9 +" \n" +num + " x 10 =  " + num * 10 +" \n");
+                if (num > 123456789){
+//                    editText.setError("This is big number");
+                    Toast.makeText(MainActivity.this, "This is big number", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    textView.setText(num + "  x  1   =  " + num * 1 +" \n" +num + "  x  2   =  " + num * 2 +" \n" +num + "  x  3   =  " + num * 3 +" \n" +num + "  x  4   =  " + num * 4 +" \n" +num + "  x  5   =  " + num * 5 +" \n" +num + "  x  6   =  " + num * 6 +" \n" +num + "  x  7   =  " + num * 7 +" \n" +num + "  x  8   =  " + num * 8 +" \n" +num + "  x  9   =  " + num * 9 +" \n" +num + "  x  10 =  " + num * 10 +" \n");
+                }
             }
         });
     }
